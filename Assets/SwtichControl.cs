@@ -18,7 +18,7 @@ public class SwtichControl : MonoBehaviour {
 
     private void OnGUI()
     {
-        if (GUI.Button(new Rect(Screen.width/2-150/2, Screen.height/2-150/2, 150, 150), "Switch"))
+        if (GUI.Button(new Rect(Screen.width/2-150/2, Screen.height/2-150/2, 150, 150), sun.GetComponent<Light>().enabled?"Turn Off":"Turn On"))
             sun.GetComponent<Light>().enabled = !sun.GetComponent<Light>().enabled;
     }
 }
